@@ -14,10 +14,10 @@ INSERT INTO employee_office (employee_id, office_id) VALUES (1, 1);
 
 INSERT INTO employee_office (employee_id, office_id) VALUES (2, 2);
 
-INSERT INTO country (id,) VALUES (1, 2);
+INSERT INTO country (id) VALUES (1);
 
-INSERT INTO country (person_id, house_id) VALUES (1, 2);
+INSERT INTO country (id) VALUES (1);
 
-INSERT INTO document (person_id, house_id) VALUES (1, 2);
+INSERT INTO document (id) VALUES (1);
 
-INSERT INTO document (person_id, house_id) VALUES (1, 2);
+INSERT INTO document (id) VALUES (1);
