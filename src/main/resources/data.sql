@@ -6,18 +6,16 @@ INSERT INTO office (name, address, phone, organization_id) VALUES ('Магнит
 
 INSERT INTO office (name, address, phone, organization_id) VALUES ( 'Пятерочка', 'Затонная, 20', 9090901, 2);
 
-INSERT INTO employee (version, first_name, second_name, middle_name, position, phone, country_id, document_id) VALUES ( 1, 'Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565 );
+INSERT INTO employee (version, first_name, second_name, middle_name, position, phone)  VALUES ( 1, 'Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565 );
 
-INSERT INTO employee (version, first_name, second_name, middle_name, position, phone, country_id, document_id) VALUES ( 1, 'Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565);
+INSERT INTO employee (version, first_name, second_name, middle_name, position, phone) VALUES ( 1, 'Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565);
 
-INSERT INTO employee_office (employee_id, office_id) VALUES (1, 1);
 
-INSERT INTO employee_office (employee_id, office_id) VALUES (2, 2);
 
-INSERT INTO country (id) VALUES (1);
+INSERT INTO country (name) VALUES ('vv');
 
-INSERT INTO country (id) VALUES (1);
+INSERT INTO country (name) VALUES ('ww');
 
-INSERT INTO document (id) VALUES (1);
+INSERT INTO document (name) VALUES ('qq');
 
-INSERT INTO document (id) VALUES (1);
+INSERT INTO document (name) VALUES ('tt');
