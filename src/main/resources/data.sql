@@ -38,19 +38,19 @@ VALUES ('Нездоймина', 'Ирина', 'Александровна', 'К�
 
 
 
-INSERT INTO doc  (code, doc_name, version) VALUES (03, 'Свидетельство о рождении', 1);
+INSERT INTO doc  (code, name, version) VALUES (03, 'Свидетельство о рождении', 1);
 
-INSERT INTO doc  (code, doc_name, versio) VALUES (07, 'Военный билет', 1);
+INSERT INTO doc  (code, name, version) VALUES (07, 'Военный билет', 1);
 
-INSERT INTO doc  (code, doc_name, versio) VALUES (10, 'Паспорт иностранного гражданина', 1);
+INSERT INTO doc  (code, name, version) VALUES (10, 'Паспорт иностранного гражданина', 1);
 
-INSERT INTO doc  (code, doc_name, versio) VALUES (21, 'Паспорт гражданина Российской Федерации', 1);
+INSERT INTO doc  (code, name, version) VALUES (21, 'Паспорт гражданина Российской Федерации', 1);
 
 
-INSERT INTO country (сode, country_name, version) VALUES (643, 'Российская Федерация', 1);
+INSERT INTO country (сode, name, version) VALUES (643, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, country_name, version) VALUES (641, 'Российская Федерация', 1);
+INSERT INTO country (сode, name, version) VALUES (641, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, country_name, version) VALUES (644, 'Российская Федерация', 1);
+INSERT INTO country (сode, name, version) VALUES (644, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, country_name, version) VALUES (645, 'Российская Федерация', 1);
+INSERT INTO country (сode, name, version) VALUES (645, 'Российская Федерация', 1);
