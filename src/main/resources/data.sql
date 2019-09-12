@@ -47,10 +47,10 @@ INSERT INTO doc  (code, name, version) VALUES (10, 'Паспорт иностр�
 INSERT INTO doc  (code, name, version) VALUES (21, 'Паспорт гражданина Российской Федерации', 1);
 
 
-INSERT INTO country (сode, name, version) VALUES (643, 'Российская Федерация', 1);
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, name, version) VALUES (641, 'Российская Федерация', 1);
+INSERT INTO country (code, name, version) VALUES (641, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, name, version) VALUES (644, 'Российская Федерация', 1);
+INSERT INTO country (code, name, version) VALUES (644, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, name, version) VALUES (645, 'Российская Федерация', 1);
+INSERT INTO country (code, name, version) VALUES (645, 'Российская Федерация', 1);
