@@ -1,14 +1,14 @@
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ( 'ООО', 'ТАНДЕР', 102938, 464738, 'Исаева, 2', '252525', TRUE, 1);
+VALUES ( 'ООО', 'ТАНДЕР', 102938, 464738, 'Исаева, 2', 252525, TRUE, 1);
 
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ('ОАО', 'Х5 Group', 174783, 127209, 'Ленина, 80', '909090', TRUE, 1);
+VALUES ('ОАО', 'Х5 Group', 174783, 127209, 'Ленина, 80', 909090, TRUE, 1);
 
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ( 'ООО', 'Альфа', 121092, 133756, 'Семенова, 25', '777777', TRUE, 1);
+VALUES ( 'ООО', 'Альфа', 121092, 133756, 'Семенова, 25', 777777, TRUE, 1);
 
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ('AAA', 'SUMKA', 009922, 664553, 'Волоха', 11', '111888', FALSE, 1);
+VALUES ('AAA', 'SUMKA', 009922, 664553, 'Волоха', 11', 111888, FALSE, 1);
 
 
 INSERT INTO office (name, address, phone, org_id, is_active, version) 
