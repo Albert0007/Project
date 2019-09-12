@@ -21,20 +21,20 @@ INSERT INTO office (name, address, phone, org_id, is_active, version)
 VALUES ('КИБ', 'ул.Польская, 100', 7777771, 1, TRUE, 1);
 
 INSERT INTO office (name, address, phone, org_id, is_active, version)
-VALUES ( 'Cумка', 'Печная, 76', 1118881, 1, TRUE, 1);
+VALUES ( 'Cумка', 'Печная, 76', 1118881, 1, FALSE, 1);
 
 
 INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, citizenship_code, is_identified_code, office_id, doc_code, version)  
-VALUES ('Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565, 21, 6310987678, 2010-2-12, 643, 1);
+VALUES ('Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565, 21, 6310987678, 2010-2-12, 643, TRUE, 1, 21, 1);
 
 INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, citizenship_code, is_identified_code, office_id, doc_code, version)  
-VALUES ('Вера', 'Тушканова', 'Александровна', 'Администратор', 230948, 21, 4310987567, 2008-05-02, 643, 1);
+VALUES ('Вера', 'Тушканова', 'Александровна', 'Администратор', 230948, 21, 4310987567, 2008-05-02, 643, TRUE, 2, 21, 1);
 
 INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, citizenship_code, is_identified_code, office_id, doc_code, version)  
-VALUES ('Андрей', 'Иконников', 'Валерьевич', 'Специалист ОПП', 976354, 21, 7634187625,2012-06-12, 643, 1);
+VALUES ('Андрей', 'Иконников', 'Валерьевич', 'Специалист ОПП', 976354, 21, 7634187625,2012-06-12, 643, TRUE, 3, 10, 1);
 
 INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, citizenship_code, is_identified_code, office_id, doc_code, version)  
-VALUES ('Нездоймина', 'Ирина', 'Александровна', 'Кассир', 354265, 21, 909818, 2014-03-07, 643, 1);
+VALUES ('Нездоймина', 'Ирина', 'Александровна', 'Кассир', 354265, 21, 909818, 2014-03-07, 643, TRUE, 4, 07, 1);
 
 
 
