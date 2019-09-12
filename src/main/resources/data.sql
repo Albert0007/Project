@@ -49,8 +49,8 @@ INSERT INTO doc  (code, doc_name, versio) VALUES (21, 'Паспорт гражд
 
 INSERT INTO country (сode, country_name, version) VALUES (643, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, country_name, version) VALUES (643, 'Российская Федерация', 1);
+INSERT INTO country (сode, country_name, version) VALUES (641, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, country_name, version) VALUES (643, 'Российская Федерация', 1);
+INSERT INTO country (сode, country_name, version) VALUES (644, 'Российская Федерация', 1);
 
-INSERT INTO country (сode, country_name, version) VALUES (643, 'Российская Федерация', 1);
+INSERT INTO country (сode, country_name, version) VALUES (645, 'Российская Федерация', 1);
