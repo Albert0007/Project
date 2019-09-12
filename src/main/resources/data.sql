@@ -8,7 +8,7 @@ INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, 
 VALUES ( 'ООО', 'Альфа', 121092, 133756, 'Семенова, 25', 777777, TRUE, 1);
 
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ('AAA', 'SUMKA', 009922, 664553, 'Волоха', 11', 111888, FALSE, 1);
+VALUES ('AAA', 'SUMKA', 009922, 664553, 'Волоха, 11', 111888, FALSE, 1);
 
 
 INSERT INTO office (name, address, phone, org_id, is_active, version) 
