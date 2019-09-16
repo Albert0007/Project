@@ -1,56 +1,63 @@
+
+
+INSERT INTO document  (code, name, version) VALUES (03, 'Свидетельство о рождении', 0);
+
+INSERT INTO document  (code, name, version) VALUES (21, 'Паспорт гражданина Российской Федерации ', 0);
+
+INSERT INTO document  (code, name, version) VALUES (07, 'Военный билет', 0);
+
+
+
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+
+
+
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, doc_name, doc_number, doc_data, version)
+VALUES (1,'Иван', 'Павлов', 'Александрович', 'продавец', 89198276357, true, 1, 2, 'Паспорт гражданина Российской Федерации', 21, 23-01-2011, 0);
+
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, doc_name, doc_number, doc_data, version)
+VALUES (2,'Вера', 'Сергеева', 'Андреевна', 'кассир', 89270909879, true, 1, 1, 'Свидетельство о рождении', 03, 25-05-1995, 0);
+
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, doc_name, doc_number, doc_data, version)
+VALUES (3,'Ирина', 'Николаева', 'Петровна', 'директор', 878787, true, 1, 2, 'Паспорт гражданина Российской Федерации', 21, 12-02-2014, 0);
+
+
+
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ( 'ООО', 'ТАНДЕР', 102938, 464738, 'Исаева, 2', 252525, TRUE, 1);
+VALUES ('ОOО', 'Тандер', 321987, 948736, 'Менякина, 7', 242424, TRUE, 0);
 
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ('ОАО', 'Х5 Group', 174783, 127209, 'Ленина, 80', 909090, TRUE, 1);
+VALUES ('ОАО', 'Х5 Group', 174783, 127209, 'Ленина, 80', 909090, TRUE, 0);
 
 INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ( 'ООО', 'Альфа', 121092, 133756, 'Семенова, 25', 777777, TRUE, 1);
-
-INSERT INTO organization (name, full_name, inn, kpp, address, phone, is_active, version) 
-VALUES ('AAA', 'SUMKA', 009922, 664553, 'Волоха, 11', 111888, FALSE, 1);
-
-
-INSERT INTO office (name, address, phone, org_id, is_active, version) 
-VALUES ('Магнит', 'ул.Лунина, 7', 2525251, 1, TRUE, 1);
-
-INSERT INTO office (name, address, phone, org_id, is_active, version)
-VALUES ( 'Пятерочка', 'Затонная, 20', 9090901, 1, TRUE, 1);
-
-INSERT INTO office (name, address, phone, org_id, is_active, version) 
-VALUES ('КИБ', 'ул.Польская, 100', 7777771, 1, TRUE, 1);
-
-INSERT INTO office (name, address, phone, org_id, is_active, version)
-VALUES ( 'Cумка', 'Печная, 76', 1118881, 1, FALSE, 1);
-
-
-INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, is_identified_code, office_id, citizenship_code, doc_code, version)  
-VALUES ('Иван', 'Иванов', 'Сергеевич', 'Продавец', 656565, 21, 6310987678, 2010-2-12, TRUE, 1, 643, 07, 1);
-
-INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, is_identified_code, office_id, citizenship_code, doc_code, version)  
-VALUES ('Вера', 'Тушканова', 'Александровна', 'Администратор', 230948, 21, 4310987567, 2008-05-02, TRUE, 2, 643, 07, 1);
-
-INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, is_identified_code, office_id, citizenship_code, doc_code, version)  
-VALUES ('Андрей', 'Иконников', 'Валерьевич', 'Специалист ОПП', 976354, 21, 7634187625,2012-06-12, TRUE, 3, 643, 07, 1);
-
-INSERT INTO employee (first_name, second_name, middle_name, position, phone, doc_name, doc_number, doc_data, is_identified_code, office_id, citizenship_code, doc_code,  version)  
-VALUES ('Нездоймина', 'Ирина', 'Александровна', 'Кассир', 354265, 21, 909818, 2014-03-07, TRUE, 4, 643, 07, 1);
+VALUES ('О00', 'Альфа', 574638, 109387, 'Измайлова, 124', 777666, TRUE, 0);
 
 
 
-INSERT INTO doc  (code, name, version) VALUES (03, 'Свидетельство о рождении', 1);
+INSERT INTO office (id, first_name, address, phone, org_id, is_active, version) 
+VALUES (1, 'Магнит', 'ул.Лунина, 7', 2424241, 1, TRUE, 0);
 
-INSERT INTO doc  (code, name, version) VALUES (07, 'Военный билет', 1);
+INSERT INTO office (id, first_name, address, phone, org_id, is_active, version) 
+VALUES (2, 'Пятерочка', 'ул.Пушкина, 19', 9090901, 2, TRUE, 0);
 
-INSERT INTO doc  (code, name, version) VALUES (10, 'Паспорт иностранного гражданина', 1);
+INSERT INTO office (id, first_name, address, phone, org_id, is_active, version) 
+VALUES (3, 'КиБ', 'ул.Невская, 37', 7776661, 3, TRUE, 0);
 
-INSERT INTO doc  (code, name, version) VALUES (21, 'Паспорт гражданина Российской Федерации', 1);
 
 
-INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 1);
+INSERT INTO Employee_Office (employee_id, office_id) 
+VALUES (1, 1);
 
-INSERT INTO country (code, name, version) VALUES (641, 'Российская Федерация', 1);
+INSERT INTO Employee_Office (employee_id, office_id) 
+VALUES (2, 2);
 
-INSERT INTO country (code, name, version) VALUES (644, 'Российская Федерация', 1);
+INSERT INTO Employee_Office (employee_id, office_id) 
+VALUES (3, 3);
 
-INSERT INTO country (code, name, version) VALUES (645, 'Российская Федерация', 1);
+
+
+
