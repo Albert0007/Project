@@ -7,14 +7,27 @@ CREATE TABLE IF NOT EXISTS country (
 );
 
 
-
-
 CREATE TABLE IF NOT EXISTS document (
    id      INTEGER     NOT NULL  PRIMARY KEY AUTO_INCREMENT  COMMENT 'Уникальный документ',
    name    VARCHAR(50) NOT NULL                              COMMENT 'Название документа',
    version INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate',
    code    INTEGER     NOT NULL                              COMMENT 'Уникальный код документа'
 );
+
+CREATE INDEX IX_document_ibfk_1 ON document(name);
+
+
+
+CREATE TABLE IF NOT EXISTS document_registry (
+   id          INTEGER       NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Уникальный идентификатор документа',
+   doc_name    VARCHAR(50)   NOT NULL                            COMMENT 'Название документа',
+   doc_number  INTEGER       NOT NULL                            COMMENT 'Уникальный идентификатор документа',
+   doc_data    date          NOT NULL                            COMMENT 'Дата выдачи документа',
+   version INTEGER           NOT NULL                            COMMENT 'Служебное поле hibernate'
+  
+);
+CREATE INDEX IX_document_registry_ibfk_1 ON document_registry(doc_name);
+ALTER TABLE document_registry ADD FOREIGN KEY (doc_name) REFERENCES document(name);
 
 
 
@@ -28,18 +41,12 @@ CREATE TABLE IF NOT EXISTS employee (
    phone          INTEGER     NOT NULL                              COMMENT 'Телефон',
    is_identified  BOOLEAN                                           COMMENT 'Работающий или не работающий, если работающий - true',
    country_id     INTEGER     NOT NULL                              COMMENT 'Уникальный идентификатор страны',
-   version       INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate',
-   document_id    INTEGER     NOT NULL                              COMMENT 'Уникальный идентификатор документа',
-   doc_name      INTEGER     NOT NULL,
-   doc_number     INTEGER     NOT NULL,
-   doc_data       date        NOT NULL
+   version        INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate'
 );
-
-CREATE INDEX IX_employee_ibfk_1 ON employee (document_id);
-ALTER TABLE employee ADD FOREIGN KEY (document_id) REFERENCES document(id);
 
 CREATE INDEX IX_employee_ibfk_2 ON employee (country_id);
 ALTER TABLE employee ADD FOREIGN KEY (country_id) REFERENCES country(id);
+
 
 CREATE TABLE IF NOT EXISTS organization (
   id             INTEGER     NOT NULL  PRIMARY KEY AUTO_INCREMENT    COMMENT 'Уникальный идентификатор',
