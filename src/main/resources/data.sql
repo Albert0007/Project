@@ -1,3 +1,11 @@
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+
+INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+
+
+
 
 
 INSERT INTO document  (code, name, version) VALUES (03, 'Свидетельство о рождении', 0);
@@ -8,22 +16,26 @@ INSERT INTO document  (code, name, version) VALUES (07, 'Военный биле
 
 
 
-INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+INSERT INTO document_registry (doc_name, doc_number, doc_data, version) VALUES ('Паспорт гражданина Российской Федерации', 21, 23-01-2011, 0);
 
-INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+INSERT INTO document_registry (doc_name, doc_number, doc_data, version) VALUES ('Паспорт гражданина Российской Федерации', 21, 23-01-2011, 0);
 
-INSERT INTO country (code, name, version) VALUES (643, 'Российская Федерация', 0);
+INSERT INTO document_registry (doc_name, doc_number, doc_data, version) VALUES ('Паспорт гражданина Российской Федерации', 21, 23-01-2011, 0);
 
 
 
-INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, doc_name, doc_number, doc_data, version)
-VALUES (1,'Иван', 'Павлов', 'Александрович', 'продавец', 89198276357, true, 1, 2, 'Паспорт гражданина Российской Федерации', 21, 23-01-2011, 0);
 
-INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, doc_name, doc_number, doc_data, version)
-VALUES (2,'Вера', 'Сергеева', 'Андреевна', 'кассир', 89270909879, true, 1, 1, 'Свидетельство о рождении', 03, 25-05-1995, 0);
 
-INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, doc_name, doc_number, doc_data, version)
-VALUES (3,'Ирина', 'Николаева', 'Петровна', 'директор', 878787, true, 1, 2, 'Паспорт гражданина Российской Федерации', 21, 12-02-2014, 0);
+
+
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, version)
+VALUES (1,'Иван', 'Павлов', 'Александрович', 'продавец', 89198276357, true, 1, 0);
+
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, version)
+VALUES (2,'Вера', 'Сергеева', 'Андреевна', 'кассир', 89270909879, true, 1, 0);
+
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, version)
+VALUES (3,'Ирина', 'Николаева', 'Петровна', 'директор', 878787, true, 1, 0);
 
 
 
