@@ -43,7 +43,8 @@ CREATE TABLE IF NOT EXISTS employee (
    phone          INTEGER     NOT NULL                              COMMENT 'Телефон',
    is_identified  BOOLEAN                                           COMMENT 'Работающий или не работающий, если работающий - true',
    country_id     INTEGER     NOT NULL                              COMMENT 'Уникальный идентификатор страны',
-   version        INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate'
+   version        INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate',
+   document_id    INTEGER     NOT NULL                              COMMENT 'Номер документа'
 );
 COMMENT ON TABLE employee IS 'Сотрудник';
 
