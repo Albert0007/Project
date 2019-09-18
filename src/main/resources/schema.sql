@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS country (
    version INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate',
    code    INTEGER     NOT NULL                              COMMENT 'Уникальный код страны'
 );
-
+COMMENT ON TABLE Person IS 'Страна';
 
 CREATE TABLE IF NOT EXISTS document (
    id      INTEGER     NOT NULL  PRIMARY KEY AUTO_INCREMENT  COMMENT 'Уникальный документ',
@@ -13,10 +13,9 @@ CREATE TABLE IF NOT EXISTS document (
    version INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate',
    code    INTEGER     NOT NULL                              COMMENT 'Уникальный код документа'
 );
+COMMENT ON TABLE Person IS 'Документ';
 
 CREATE INDEX IX_document_ibfk_1 ON document(name);
-
-
 
 CREATE TABLE IF NOT EXISTS document_registry (
    id          INTEGER       NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Уникальный идентификатор документа',
@@ -26,6 +25,8 @@ CREATE TABLE IF NOT EXISTS document_registry (
    version INTEGER           NOT NULL                            COMMENT 'Служебное поле hibernate'
   
 );
+COMMENT ON TABLE Person IS 'Документ_реестр';
+
 CREATE INDEX IX_document_registry_ibfk_1 ON document_registry(doc_name);
 ALTER TABLE document_registry ADD FOREIGN KEY (doc_name) REFERENCES document(name);
 
@@ -43,6 +44,7 @@ CREATE TABLE IF NOT EXISTS employee (
    country_id     INTEGER     NOT NULL                              COMMENT 'Уникальный идентификатор страны',
    version        INTEGER     NOT NULL                              COMMENT 'Служебное поле hibernate'
 );
+COMMENT ON TABLE Person IS 'Сотрудник';
 
 CREATE INDEX IX_employee_ibfk_2 ON employee (country_id);
 ALTER TABLE employee ADD FOREIGN KEY (country_id) REFERENCES country(id);
@@ -59,8 +61,7 @@ CREATE TABLE IF NOT EXISTS organization (
   is_active      BOOLEAN                                             COMMENT 'Действующая организация, если действует - true',
   version        INTEGER     NOT NULL                                COMMENT 'Служебное поле hibernate'
 );
-
-
+COMMENT ON TABLE Person IS 'Организация';
 
 
 CREATE TABLE IF NOT EXISTS office (
@@ -72,6 +73,7 @@ CREATE TABLE IF NOT EXISTS office (
   version        INTEGER       NOT NULL                              COMMENT 'Служебное поле hibernate',
   org_id         INTEGER       NOT NULL
 );
+COMMENT ON TABLE Person IS 'Офис';
 
 CREATE INDEX IX_office_ibfk_1 ON office (org_id);
 ALTER TABLE office ADD FOREIGN KEY (org_id) REFERENCES organization(id);
@@ -82,7 +84,7 @@ CREATE TABLE IF NOT EXISTS Employee_Office (
    employee_id    INTEGER     NOT NULL      COMMENT 'Уникальный идентификатор сотрудника',
    office_id      INTEGER     NOT NULL      COMMENT 'Уникальный идентификатор офиса'
 );
-
+COMMENT ON TABLE Person IS 'join-таблица для связи сотрудника и офиса';
 
 CREATE INDEX IX_employee_office_ibfk_1 ON Employee_Office (employee_id);
 ALTER TABLE Employee_Office ADD FOREIGN KEY (employee_id) REFERENCES employee(id);
