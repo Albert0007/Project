@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS document (
 COMMENT ON TABLE document IS 'Документ';
 
 CREATE INDEX IX_document_ibfk_1 ON document(name);
-CREATE INDEX IX_document_ibfk_2 ON document(id);
 
-CREATE TABLE IF NOT EXISTS document_registry (
+
+CREATE TABLE IF NOT EXISTS document_type (
    id          INTEGER       NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT 'Уникальный идентификатор документа',
    doc_name    VARCHAR(50)   NOT NULL                            COMMENT 'Название документа',
    doc_number  INTEGER       NOT NULL                            COMMENT 'Уникальный идентификатор документа',
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS document_registry (
    version INTEGER           NOT NULL                            COMMENT 'Служебное поле hibernate'
   
 );
-COMMENT ON TABLE document_registry IS 'Документ_реестр';
+COMMENT ON TABLE document_type IS 'Документ_реестр';
 
 CREATE INDEX IX_document_registry_ibfk_1 ON document_registry(doc_name);
 ALTER TABLE document_registry ADD FOREIGN KEY (doc_name) REFERENCES document(name);
@@ -100,14 +100,14 @@ ALTER TABLE Employee_Office ADD FOREIGN KEY (office_id) REFERENCES office(id);
 
 CREATE TABLE IF NOT EXISTS Office_Organization (
    org_id    INTEGER     NOT NULL      COMMENT 'Уникальный идентификатор организации',
-   off_id    INTEGER     NOT NULL      COMMENT 'Уникальный идентификатор офиса'
+   office_id    INTEGER     NOT NULL      COMMENT 'Уникальный идентификатор офиса'
 );
 COMMENT ON TABLE Office_Organization IS 'join-таблица для связи офиса и организации';
 
 CREATE INDEX IX_office_organization_ibfk_1 ON Office_Organization (org_id);
 ALTER TABLE Office_Organization ADD FOREIGN KEY (org_id) REFERENCES organization(id);
 
-CREATE INDEX IX_office_organization_ibfk_2 ON Office_Organization(off_id);
+CREATE INDEX IX_office_organization_ibfk_2 ON Office_Organization(office_id);
 ALTER TABLE Office_Organization ADD FOREIGN KEY (off_id) REFERENCES office(id);
 
 
