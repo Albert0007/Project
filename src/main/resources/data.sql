@@ -28,14 +28,14 @@ INSERT INTO document_registry (doc_name, doc_number, doc_data, version) VALUES (
 
 
 
-INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, version)
-VALUES (1,'Иван', 'Павлов', 'Александрович', 'продавец', 89198276357, true, 1, 0);
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, version)
+VALUES (1,'Иван', 'Павлов', 'Александрович', 'продавец', 89198276357, true, 1, 1, 0);
 
-INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, version)
-VALUES (2,'Вера', 'Сергеева', 'Андреевна', 'кассир', 89270909879, true, 1, 0);
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, version)
+VALUES (2,'Вера', 'Сергеева', 'Андреевна', 'кассир', 89270909879, true, 1, 1, 0);
 
-INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, version)
-VALUES (3,'Ирина', 'Николаева', 'Петровна', 'директор', 878787, true, 1, 0);
+INSERT INTO employee ( id, first_name, second_name, middle_name, position, phone, is_identified, country_id, document_id, version)
+VALUES (3,'Ирина', 'Николаева', 'Петровна', 'директор', 878787, true, 1, 1, 0);
 
 
 
@@ -68,6 +68,13 @@ INSERT INTO Employee_Office (employee_id, office_id)
 VALUES (2, 2);
 
 INSERT INTO Employee_Office (employee_id, office_id) 
+VALUES (3, 3);
+
+INSERT INTO Office_Organization (org_id, off_id) 
+VALUES (1, 1);
+INSERT INTO Office_Organization (org_id, off_id) 
+VALUES (2, 2);
+INSERT INTO Office_Organization (org_id, off_id) 
 VALUES (3, 3);
 
 
