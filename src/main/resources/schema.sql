@@ -28,8 +28,8 @@ CREATE TABLE IF NOT EXISTS document_type (
 );
 COMMENT ON TABLE document_type IS 'Документ_реестр';
 
-CREATE INDEX IX_document_registry_ibfk_1 ON document_registry(doc_name);
-ALTER TABLE document_registry ADD FOREIGN KEY (doc_name) REFERENCES document(name);
+CREATE INDEX IX_document_type_ibfk_1 ON document_type(doc_name);
+ALTER TABLE document_type ADD FOREIGN KEY (doc_name) REFERENCES document(name);
 
 
 
@@ -48,10 +48,10 @@ CREATE TABLE IF NOT EXISTS employee (
 );
 COMMENT ON TABLE employee IS 'Сотрудник';
 
-CREATE INDEX IX_employee_ibfk_1 ON employee (document_id);
+CREATE UNIQUE INDEX IX_employee_ibfk_1 ON employee (document_id);
 ALTER TABLE employee ADD FOREIGN KEY (document_id) REFERENCES document(id);
 
-CREATE INDEX IX_employee_ibfk_2 ON employee (country_id);
+CREATE UNIQUE INDEX IX_employee_ibfk_2 ON employee (country_id);
 ALTER TABLE employee ADD FOREIGN KEY (country_id) REFERENCES country(id);
 
 
