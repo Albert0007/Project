@@ -108,7 +108,7 @@ CREATE INDEX IX_office_organization_ibfk_1 ON Office_Organization (org_id);
 ALTER TABLE Office_Organization ADD FOREIGN KEY (org_id) REFERENCES organization(id);
 
 CREATE INDEX IX_office_organization_ibfk_2 ON Office_Organization(office_id);
-ALTER TABLE Office_Organization ADD FOREIGN KEY (off_id) REFERENCES office(id);
+ALTER TABLE Office_Organization ADD FOREIGN KEY (office_id) REFERENCES office(id);
 
 
 
